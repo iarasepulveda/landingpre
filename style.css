@@ -1,0 +1,253 @@
+/* ------------------------- */
+/* TIPOGRAFÍA PERSONALIZADA  */
+/* ------------------------- */
+@font-face {
+    font-family: "Work Sans";
+    src: url("Fuentes/Work_Sans/WorkSans-VariableFont_wght.ttf");
+}
+
+/* ------------------------- */
+/* ESTILOS GENERALES         */
+/* ------------------------- */
+
+
+body {
+  background-image: url("imagenes/Portadas/fondodesktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  padding-top: 200px; /* para que el header fijo no tape el contenido */
+  font-family: "Work Sans";
+}
+
+h1, h2, h3, p {
+  font-family: "Work Sans";
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+a:hover {
+  color: #D744CC;
+  text-decoration: underline;
+}
+
+/* ------------------------- */
+/* HEADER / NAV              */
+/* ------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5e9e9;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav a {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.icons-redes {
+  height: 130px;
+  width: auto;
+}
+/* ------------------------- */
+/* GALERIA HORIZONTAL DE MINIATURAS!!  */
+/* ------------------------- */
+
+.galeria-horizontal {
+  overflow: hidden;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.galeria-inner {
+  display: flex;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.galeria-inner img {
+  height: 400px;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+/* ------------------------- */
+/* BOTÓN CTA                 */
+/* ------------------------- */
+.boton-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.boton-imagen {
+  width: 300px;
+  cursor: pointer;
+}
+
+/* ------------------------- */
+/* SECCIÓN: BULLETS (details) */
+/* ------------------------- */
+.bullet {
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.bullet summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ------------------------- */
+/* CARROUSEL                  */
+/* ------------------------- */
+.carrousel {
+  margin: 40px 0;
+}
+
+.carrousel-inner {
+  display: flex;
+  width: fit-content;
+  animation: scrollCarrousel 20s linear infinite;
+}
+
+.carrousel:hover .carrousel-inner {
+  animation-play-state: paused;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 150px;
+  margin-right: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scrollCarrousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------- */
+/* SECCIÓN QUIÉNES SON      */
+/* ------------------------- */
+.quienes-son {
+  padding: 600px; /*ESPACIO PORQUE FALTA LA INFO DE TOP MOMENTOS*/
+}
+
+.quienes-son h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards-horizontal {
+  display: flexbox;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(228, 228, 228);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-horizontal img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem 2rem;
+}
+
+.card-info h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+
+.card-info blockquote {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* ------------------------- */
+/* FOOTER                    */
+/* ------------------------- */
+footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  font-style: italic;
+  text-align: center;
+}
